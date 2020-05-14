@@ -1,0 +1,164 @@
+
+:root{
+	/*font variables*/
+	--main-font: 'Francois One';
+
+}
+
+* {
+  margin: 0px;
+  padding: 0px; 
+  outline: none;
+  border: 0px;
+} /*reset whitespace*/
+
+body {
+	font-family: var(--main-font), sans-serif;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+h1 {
+	font-size: 40px;
+  color: #F9E3A6;
+  font-weight: bold;
+  text-shadow: 4px 4px 7px navy;
+}
+
+/*display the cards in a grid*/
+.grid{    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border: 2px solid black;
+    justify-content: center;
+    max-width: 900px;
+    background-color: #61BBD6;
+    padding: 20px;
+    background-image: url("img/waves.png");
+}
+
+
+/* code for flipping the cards */
+
+.flipCard {
+  -webkit-perspective: 800;
+  -ms-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+   width: 100px;
+   height: 140px;
+   position: relative;
+   margin: 11px;
+
+}
+.flipCard .card.flipped {
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+}
+.flipCard .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.8s; /*controls speed of flip*/
+}
+.flipCard .card .side {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  backface-visibility: hidden;  /* W3C */
+  -webkit-backface-visibility: hidden; /* Safari & Chrome */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  -o-backface-visibility: hidden; /* Opera */
+  border-radius: 8px;
+}
+.flipCard .card .back {
+
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+}
+
+.flipCard .card .front {
+}
+.flipCard .card .back {
+
+}
+
+/*end of code for flipping the cards*/
+
+/*image of the character*/
+.cardBacks{
+  width: 100px;
+  height: 140px;
+  border: 5px solid navy;
+  border-radius: 8px;
+}
+
+/*set leaf size*/
+.cardFronts {
+  width: 100px;
+  height: 100px;
+}
+
+/*leaf card container*/
+.front{
+  border: 5px solid navy;
+  border-radius: 8px;
+  background-color: lightgray;
+   background-image: url("img/beach.jpg");
+  width: 100px;
+  height: 140px;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*my buttons*/
+.addRowCenterContent {
+	width:100%;
+	display: flex;
+	justify-content: center;
+  margin: 10px 0;
+}
+
+button {
+cursor: pointer;
+color: white;
+text-transform: uppercase;
+background: black;
+padding: 20px;
+border: 4px solid navy;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+font-size: 22px;
+font-family: var(--main-font), sans-serif;
+}
+
+button:hover {
+color: white;
+border-radius: 50px;
+border-color: red;
+transition: all 0.3s ease 0s;
+}
