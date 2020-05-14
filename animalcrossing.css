@@ -36,7 +36,7 @@ h1 {
     max-width: 900px;
     background-color: #61BBD6;
     padding: 20px;
-    background-image: url("img/waves.png");
+    background-image: url("waves.png");
 }
 
 
@@ -124,7 +124,7 @@ h1 {
   border: 5px solid navy;
   border-radius: 8px;
   background-color: lightgray;
-   background-image: url("img/beach.jpg");
+   background-image: url("beach.jpg");
   width: 100px;
   height: 140px;
   vertical-align: center;
