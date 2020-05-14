@@ -111,8 +111,8 @@ function checkForMatch(){
 
     if(cardsChosen[0] === cardsChosen[1]){
         alert("You found a match!");
-        cardBacksNodeList[optionOneId].setAttribute("src", "img/white.png");
-        cardBacksNodeList[optionTwoId].setAttribute("src", "img/white.png");
+        cardBacksNodeList[optionOneId].setAttribute("src", "white.png");
+        cardBacksNodeList[optionTwoId].setAttribute("src", "white.png");
         //turn off click function after I "pick up" my match
         cardToFlip[optionOneId].removeEventListener("click", toggleToFlip);
         cardToFlip[optionTwoId].removeEventListener("click", toggleToFlip);
